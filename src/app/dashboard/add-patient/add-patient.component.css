@@ -1,0 +1,26 @@
+form {
+    /* display: flex;
+    flex-direction: column; */
+}
+
+form mat-form-field {
+    margin: 0px 10px;
+}
+
+form .buttons {
+    text-align: center;
+}
+
+form .buttons button {
+    margin: 0px 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
