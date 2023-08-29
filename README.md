@@ -15,23 +15,23 @@ Password: test@admin
 ## Screenshots
 
 Landing
-![App Screenshot](./screenshots/landing.png)
+![App Screenshot](https://i.ibb.co/zGxP0CH/landing.png)
 
 Login
-![App Screenshot](./screenshots/login.png)
+![App Screenshot](https://i.ibb.co/kx6jphL/login.png)
 
 Dashboard
-![App Screenshot](./screenshots/dashboard.png)
+![App Screenshot](https://i.ibb.co/QYmX70K/dashboard.png)
 
 Add Patient
-![App Screenshot](./screenshots/add-patient.png)
+![App Screenshot](https://i.ibb.co/V3ZF7SN/add-patient.png)
 
 Update Patient
-![App Screenshot](./screenshots/update-patient.png)
+![App Screenshot](https://i.ibb.co/ZH5Zr9D/update-patient.png)
 
 View Patient Details
-![App Screenshot](./screenshots/view-patient.png)
+![App Screenshot](https://i.ibb.co/rH0s8Nj/view-patient.png)
 
 Add Patient's Family Member
-![App Screenshot](./screenshots/add-patients-family-member.png)
+![App Screenshot](https://i.ibb.co/BzxpkjJ/add-patients-family-member.png)
 
