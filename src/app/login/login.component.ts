@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-login',
@@ -27,7 +28,8 @@ export class LoginComponent implements OnInit {
     }
 
     login(): void {
-        if ((this.loginForm.value.mobileNumber === 9876543210) && (this.loginForm.value.password === 'test@admin')) {
+        // Login using static credentials
+        if ((this.loginForm.value.mobileNumber === environment.mobileNumber) && (this.loginForm.value.password === environment.password)) {
             localStorage.setItem('user', JSON.stringify(this.loginForm.value));
             this.router.navigate(['/dashboard']);
         } else {

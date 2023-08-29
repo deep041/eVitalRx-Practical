@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+    production: false,
+    apikey: 'dwkoortGX8DVYzLP559sGJeWty4wX0de',
+    apiEndpoint: 'https://dev-api.evitalrx.in/',
+    mobileNumber: 9876543210,
+    password: 'test@admin'
 };
 
 /*

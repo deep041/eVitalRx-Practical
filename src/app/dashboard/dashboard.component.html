@@ -4,10 +4,10 @@
     
     <h1>Patients</h1>
 
-    <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
         <!-- First Name Column -->
         <ng-container matColumnDef="firstname">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by First Name">
+            <th mat-header-cell *matHeaderCellDef>
                 First Name
             </th>
             <td mat-cell *matCellDef="let element"> {{element.firstname}} </td>
@@ -15,7 +15,7 @@
 
         <!-- Last Name Column -->
         <ng-container matColumnDef="lastname">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Last Name">
+            <th mat-header-cell *matHeaderCellDef>
                 Last Name
             </th>
             <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
@@ -23,7 +23,7 @@
 
         <!-- Zip code Column -->
         <ng-container matColumnDef="zipcode">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Zip Code">
+            <th mat-header-cell *matHeaderCellDef>
                 Zip code
             </th>
             <td mat-cell *matCellDef="let element"> {{element.zipcode}} </td>
@@ -31,7 +31,7 @@
 
         <!-- Mobile Number Column -->
         <ng-container matColumnDef="mobile">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header sortActionDescription="Sort by Mobile Number">
+            <th mat-header-cell *matHeaderCellDef>
                 Mobile Number
             </th>
             <td mat-cell *matCellDef="let element"> {{element.mobile}} </td>
@@ -39,7 +39,7 @@
 
         <!-- Mobile Number Column -->
         <ng-container matColumnDef="action">
-            <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            <th mat-header-cell *matHeaderCellDef>
                 Action
             </th>
             <td mat-cell *matCellDef="let element"> 

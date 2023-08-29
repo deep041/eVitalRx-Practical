@@ -16,7 +16,7 @@ export class AddFamilyMemberComponent implements OnInit {
     addFamilyMemberForm!: FormGroup;
     patientData!: Patient;
 
-    options: string[] = [ "Brother", "Sister", "Father", "Mother", "Son", "Daughter", "Grand_Father", "Grand_Mother", "Uncle", "Aunt", "Wife", "Husband", "Grand_Daughter", "Grand_Son" ];
+    relations: string[] = [ "Brother", "Sister", "Father", "Mother", "Son", "Daughter", "Grand_Father", "Grand_Mother", "Uncle", "Aunt", "Wife", "Husband", "Grand_Daughter", "Grand_Son" ];
     filteredOptions!: Observable<string[]>;
 
     constructor(public dialogRef: MatDialogRef<AddFamilyMemberComponent>, private apiService: ApiService, @Inject(MAT_DIALOG_DATA) public data: { id: string }) { }
@@ -24,6 +24,7 @@ export class AddFamilyMemberComponent implements OnInit {
     ngOnInit(): void {
         this.createForm();
 
+        // Filter data list of relation
         this.filteredOptions = this.addFamilyMemberForm.controls['relation'].valueChanges.pipe(
             startWith(''),
             map(value => this._filter(value || '')),
@@ -33,7 +34,7 @@ export class AddFamilyMemberComponent implements OnInit {
     private _filter(value: string): string[] {
         const filterValue = value.toLowerCase();
     
-        return this.options.filter(option => option.toLowerCase().includes(filterValue));
+        return this.relations.filter(option => option.toLowerCase().includes(filterValue));
     }
 
     createForm(): void {
@@ -85,6 +86,7 @@ export class AddFamilyMemberComponent implements OnInit {
             payload.relation = this.addFamilyMemberForm.value.relation;
         }
 
+        // Add patient's family member
         this.apiService.addFamilyMember(payload).subscribe((data: AddFamilyMemberResponse) => {
             if (data.status_code === '1') {
                 this.dialogRef.close();

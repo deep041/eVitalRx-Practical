@@ -1,6 +1,7 @@
 .container {
     height: calc(100% - 100px - 50px);
     text-align: center;
+    overflow-x: auto;
 }
 
 .container h1 {
@@ -11,6 +12,10 @@
     position: fixed;
     bottom: 60px;
     right: 10px;
+}
+
+.container mat-icon {
+    cursor: pointer;
 }
 
 table {

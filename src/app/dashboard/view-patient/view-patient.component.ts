@@ -4,7 +4,6 @@ import { ActivatedRoute } from '@angular/router';
 import { GetPatientResponse, Patient } from 'src/app/common/interfaces/patient.interface';
 import { ApiService } from 'src/app/common/services/api/api.service';
 import { AddFamilyMemberComponent } from '../add-family-member/add-family-member.component';
-import { AddPatientComponent } from '../add-patient/add-patient.component';
 
 @Component({
     selector: 'app-view-patient',
@@ -19,6 +18,7 @@ export class ViewPatientComponent implements OnInit {
     constructor(private route: ActivatedRoute, private apiService: ApiService, public dialog: MatDialog) { }
 
     ngOnInit(): void {
+        // Get patient id from query param
         this.route.queryParams.subscribe(params => {
             this.id = params['id'];
             this.getPatient();
@@ -26,6 +26,7 @@ export class ViewPatientComponent implements OnInit {
     }
 
     getPatient(): void {
+        // Get patient data
         this.apiService.getPatient({ patient_id: this.id }).subscribe((data: GetPatientResponse) => {
             if (data.status_code === '1') {
                 this.patientData = data.data[0];

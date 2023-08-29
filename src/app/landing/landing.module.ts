@@ -6,8 +6,6 @@ import { LandingComponent } from './landing.component';
 import { CommonComponentsModule } from '../common/common.module';
 import {MatInputModule} from '@angular/material/input';
 
-
-
 @NgModule({
     declarations: [
         LandingComponent

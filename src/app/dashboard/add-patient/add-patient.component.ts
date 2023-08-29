@@ -83,12 +83,14 @@ export class AddPatientComponent implements OnInit {
             payload.dob = moment(this.addPatientForm.value.dob).format('YYYY-MM-DD');
         }
         if (this.data.id) {
+            // Update patient data
             this.apiService.updatePatient({...payload, patient_id: this.data.id}).subscribe((data: AddPatientResponse) => {
                 if (data.status_code === '1') {
                     this.dialogRef.close();
                 }
             });
         } else {
+            // Add patient
             this.apiService.addPatient(payload).subscribe((data: AddPatientResponse) => {
                 if (data.status_code === '1') {
                     this.dialogRef.close();
