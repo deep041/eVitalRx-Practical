@@ -2,7 +2,7 @@
 
 ## Run Project
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. It will navigate to landing page. Or you can see project live on [`https://e-vital-rx-practical.vercel.app/`](https://github.com/user/repo/blob/branch/other_file.md)
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. It will navigate to landing page. Or you can see project live on [`https://e-vital-rx-practical.vercel.app/`](https://e-vital-rx-practical.vercel.app/)
 
 ## Login
 
