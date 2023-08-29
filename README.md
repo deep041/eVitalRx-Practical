@@ -15,7 +15,7 @@ Password: test@admin
 ## Screenshots
 
 Landing
-![App Screenshot](screenshots/landing.png)
+![App Screenshot](./screenshots/landing.png)
 
 Login
 ![App Screenshot](screenshots/login.png)
@@ -33,5 +33,5 @@ View Patient Details
 ![App Screenshot](screenshots/view-patient.png)
 
 Add Patient's Family Member
-![App Screenshot](screenshots/add-patients-family-member.png)
+![App Screenshot](screenshots/add-patients-family-member.jpg)
 
