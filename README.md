@@ -24,7 +24,7 @@ Dashboard
 ![App Screenshot](screenshots/dashboard.png)
 
 Add Patient
-![App Screenshot](screenshots/add-patient.jpg)
+![App Screenshot](screenshots/add-patient.png)
 
 Update Patient
 ![App Screenshot](screenshots/update-patient.png)
@@ -33,5 +33,5 @@ View Patient Details
 ![App Screenshot](screenshots/view-patient.png)
 
 Add Patient's Family Member
-![App Screenshot](screenshots/add-patients-family-member.jpg)
+![App Screenshot](screenshots/add-patients-family-member.png)
 
