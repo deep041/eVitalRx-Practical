@@ -24,7 +24,7 @@ Dashboard
 ![App Screenshot](screenshots/dashboard.png)
 
 Add Patient
-![App Screenshot](screenshots/add-patient.png)
+![App Screenshot](screenshots/add-patient.jpg)
 
 Update Patient
 ![App Screenshot](screenshots/update-patient.png)
