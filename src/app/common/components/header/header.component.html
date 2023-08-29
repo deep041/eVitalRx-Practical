@@ -1,0 +1,9 @@
+<header>
+    <h2>eVitalRx Practical</h2> 
+
+    <div class="nav">
+       <a [routerLink]="['/login']" *ngIf="isLoginBtn">Login</a>
+
+       <a (click)="logout()" *ngIf="isLogoutBtn">Logout</a>
+    </div>
+</header>

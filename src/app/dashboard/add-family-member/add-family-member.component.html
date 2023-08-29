@@ -1,0 +1,78 @@
+<h2 mat-dialog-title>Add Patient's Family Member</h2>
+
+<form [formGroup]="addFamilyMemberForm">
+    <div class="form-group">
+        <mat-form-field>
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" formControlName="first_name">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Last Name</mat-label>
+            <input matInput type="text" formControlName="last_name">
+        </mat-form-field>
+    </div>
+
+    <div class="form-group">
+        <mat-form-field>
+            <mat-label>Mobile Number</mat-label>
+            <input matInput type="text" formControlName="mobile">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <mat-label>Zip Code</mat-label>
+            <input matInput type="text" formControlName="zipcode">
+        </mat-form-field>
+    </div>
+
+    <div class="form-group">
+        <mat-form-field>
+            <mat-label>Blood Group</mat-label>
+            <input matInput type="text" formControlName="blood_group">
+        </mat-form-field>    
+
+        <mat-form-field>
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender">
+              <mat-option value="male">Male</mat-option>
+              <mat-option value="female">Female</mat-option>
+              <mat-option value="other">Other</mat-option>
+            </mat-select>
+          </mat-form-field>
+    </div>
+
+    <div class="form-group">
+
+        <mat-form-field class="dob">
+            <mat-label>DOB</mat-label>
+            <input matInput formControlName="dob" [matDatepicker]="picker" (click)="picker.open()">
+            <mat-datepicker-toggle matSuffix [for]="picker">
+            </mat-datepicker-toggle>
+            <mat-datepicker #picker>
+            </mat-datepicker>
+        </mat-form-field>
+
+        <mat-form-field class="dob">
+            <mat-label>Relation</mat-label>
+            <input type="text"
+                   placeholder="Pick one"
+                   aria-label="Relation"
+                   matInput
+                   formControlName="relation"
+                   [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+              <mat-option *ngFor="let option of filteredOptions | async" [value]="relations">
+                {{option}}
+              </mat-option>
+            </mat-autocomplete>
+          </mat-form-field>
+
+    </div>
+    
+
+    <div class="buttons">
+        <button mat-raised-button color="primary" [disabled]="addFamilyMemberForm.invalid" (click)="addPatient()">Add Family Member</button>
+        <button mat-raised-button mat-dialog-close>Cancel</button>
+    </div>
+
+</form>

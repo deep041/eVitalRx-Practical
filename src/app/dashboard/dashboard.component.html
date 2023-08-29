@@ -1,0 +1,61 @@
+<app-header [isLogoutBtn]="true"></app-header>
+
+<div class="container">
+    
+    <h1>Patients</h1>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- First Name Column -->
+        <ng-container matColumnDef="firstname">
+            <th mat-header-cell *matHeaderCellDef>
+                First Name
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.firstname}} </td>
+        </ng-container>
+
+        <!-- Last Name Column -->
+        <ng-container matColumnDef="lastname">
+            <th mat-header-cell *matHeaderCellDef>
+                Last Name
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.lastname}} </td>
+        </ng-container>
+
+        <!-- Zip code Column -->
+        <ng-container matColumnDef="zipcode">
+            <th mat-header-cell *matHeaderCellDef>
+                Zip code
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.zipcode}} </td>
+        </ng-container>
+
+        <!-- Mobile Number Column -->
+        <ng-container matColumnDef="mobile">
+            <th mat-header-cell *matHeaderCellDef>
+                Mobile Number
+            </th>
+            <td mat-cell *matCellDef="let element"> {{element.mobile}} </td>
+        </ng-container>
+
+        <!-- Mobile Number Column -->
+        <ng-container matColumnDef="action">
+            <th mat-header-cell *matHeaderCellDef>
+                Action
+            </th>
+            <td mat-cell *matCellDef="let element"> 
+                <mat-icon (click)="redirect(element.id)">visibility</mat-icon> 
+                <mat-icon class="edit-icon" (click)="openDialog(element.id)">edit</mat-icon> 
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayColumns;"></tr>
+    </table>
+
+    <button mat-fab color="primary" aria-label="Add Patient" class="fab-button" (click)="openDialog()">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>
+<mat-spinner class="spinner" mode="indeterminate" *ngIf="commonService.isShowSpinner"></mat-spinner>
+
+<app-footer></app-footer>
