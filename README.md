@@ -1,27 +1,37 @@
-# EVitalRxPractical
+# EVitalRx Practical
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.11.
+## Run Project
 
-## Development server
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. It will navigate to landing page.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Login
 
-## Code scaffolding
+Login credentials
+```bash
+Mobile: 9876543210
+Password: test@admin
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Screenshots
 
-## Build
+Landing
+![App Screenshot](screenshots/landing.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Login
+![App Screenshot](screenshots/login.png)
 
-## Running unit tests
+Dashboard
+![App Screenshot](screenshots/dashboard.png)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Add Patient
+![App Screenshot](screenshots/add-patient.png)
 
-## Running end-to-end tests
+Update Patient
+![App Screenshot](screenshots/update-patient.png)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+View Patient Details
+![App Screenshot](screenshots/view-patient.png)
 
-## Further help
+Add Patient's Family Member
+![App Screenshot](screenshots/add-patients-family-member.png)
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
